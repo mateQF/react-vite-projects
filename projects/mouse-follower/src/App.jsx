@@ -4,6 +4,7 @@ function App () {
   const [enabled, setEnabled] = useState(false)
   const [position, setPosition] = useState({ x: 0, y: 0 })
 
+  // pointer move
   useEffect(() => {
     console.log('Value -> ', enabled)
     const handleMove = (e) => {
@@ -21,6 +22,19 @@ function App () {
     }
   }, [enabled])
 
+  // [] -> just when the component is assembled
+  // [enabled] -> just when enabled changes and when the component is assembled
+  // undefined -> just when the component renders
+
+  // change cursor
+  useEffect(() => {
+    document.body.classList.toggle('no-cursor', enabled)
+
+    return () => {
+      document.body.classList.remove('no-cursor')
+    }
+  }, [enabled])
+
   return (
     <main>
       <div style={{
@@ -30,10 +44,10 @@ function App () {
         borderRadius: '50%',
         opacity: 0.8,
         pointerEvents: 'none',
-        left: -25,
-        top: -25,
-        width: 50,
-        height: 50,
+        left: -15,
+        top: -15,
+        width: 30,
+        height: 30,
         transform: `translate(${position.x}px, ${position.y}px)`
       }}
       />
