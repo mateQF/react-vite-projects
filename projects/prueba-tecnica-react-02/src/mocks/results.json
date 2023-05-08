@@ -1,0 +1,76 @@
+{
+    "Search": [
+        {
+            "Title": "Doctor Mateo",
+            "Year": "2009–2011",
+            "imdbID": "tt1320315",
+            "Type": "series",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BZGQ5NTQ2YjItN2E4Yy00YmZlLTgxYWYtODA4NzdjMzg5ZjRiXkEyXkFqcGdeQXVyMTA0MjU0Ng@@._V1_SX300.jpg"
+        },
+        {
+            "Title": "Mateo",
+            "Year": "2014",
+            "imdbID": "tt3603406",
+            "Type": "movie",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BMDI0M2I0MzItYTI3My00MWE0LThiMGItOWIwOWU5NzU0ZmY3XkEyXkFqcGdeQXVyMjgxODYxMzE@._V1_SX300.jpg"
+        },
+        {
+            "Title": "Mateo",
+            "Year": "2014",
+            "imdbID": "tt1822253",
+            "Type": "movie",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BNTcyNjk0MTg0OV5BMl5BanBnXkFtZTgwNDA0OTQ2NjE@._V1_SX300.jpg"
+        },
+        {
+            "Title": "Abraham Mateo feat. Yandel and Jennifer Lopez: Se Acabo el Amor",
+            "Year": "2018",
+            "imdbID": "tt8344286",
+            "Type": "movie",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BZDk3MjIxNDUtYTY1OC00OGNjLWFkYjAtMzM2NmRkMDBlOTE0XkEyXkFqcGdeQXVyNjE0ODc0MDc@._V1_SX300.jpg"
+        },
+        {
+            "Title": "According to Mateo",
+            "Year": "2017",
+            "imdbID": "tt6329332",
+            "Type": "movie",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BNTNjZWJlOTUtZDRjNS00YTljLTliZDItNWRmZDFkMGI1ZjJkXkEyXkFqcGdeQXVyMTA0MjU0Ng@@._V1_SX300.jpg"
+        },
+        {
+            "Title": "El Mundo de Mateo",
+            "Year": "2019–",
+            "imdbID": "tt9910184",
+            "Type": "series",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BNzE4YzE5N2QtYTQ4ZS00NzA1LWFmYzMtYjE1N2M2YjZjYzU1XkEyXkFqcGdeQXVyMjIwNDY2MDE@._V1_SX300.jpg"
+        },
+        {
+            "Title": "Mateo Falcone",
+            "Year": "2009",
+            "imdbID": "tt1570629",
+            "Type": "movie",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BZjNmNjVlOWQtMWU5ZS00NWM5LTg2ZTEtZDg1YTNlZWFmMzBlXkEyXkFqcGdeQXVyODIxNzY2MA@@._V1_SX300.jpg"
+        },
+        {
+            "Title": "Mateo",
+            "Year": "2019",
+            "imdbID": "tt9618828",
+            "Type": "movie",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BZGI3ZWNiMjAtODliMS00NTg3LTk3YTEtYjFlNmMwYjhlNGU3XkEyXkFqcGdeQXVyOTU3MDc1Mg@@._V1_SX300.jpg"
+        },
+        {
+            "Title": "El nieto de Don Mateo (la peluquería)",
+            "Year": "2000–",
+            "imdbID": "tt0242221",
+            "Type": "series",
+            "Poster": "N/A"
+        },
+        {
+            "Title": "Mateo",
+            "Year": "1937",
+            "imdbID": "tt0029220",
+            "Type": "movie",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BZWVmZGYxYWItMjNiNy00ODQ4LWIxZTMtYTIyZDM5M2U1ZWZjXkEyXkFqcGdeQXVyMjQ0NzgwNzY@._V1_SX300.jpg"
+        }
+    ],
+    "totalResults": "50",
+    "Response": "True"
+}
