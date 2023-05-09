@@ -3,12 +3,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    max-width: 800px;
 }
 
 main{
     display: flex;
     justify-content: center;
-    text-align: center;
+    width: 100%;
 }
 
 form{
@@ -17,6 +19,25 @@ form{
     align-items: center;
 }
 
-ul li {
+.movies{
+    margin: 0;
     list-style: none;
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 32px;
+}
+
+.movie {
+    text-align: center;
+}
+
+.movie p, .movie h3 {
+    margin: 10px;
+    font-weight: bold;
+}
+
+.movie img{
+    border-radius: 10px;
+    margin-top: 16px;
 }

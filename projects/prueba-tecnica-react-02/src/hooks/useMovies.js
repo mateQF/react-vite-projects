@@ -1,15 +1,24 @@
-import responseMovies from '../mocks/results.json'
-// import noResults from '../mocks/no-results.json'
+import { useState } from 'react'
+import { searchMovies } from '../services/movies'
 
-export const useMovies = () => {
-  const movies = responseMovies.Search
+export const useMovies = ({ search }) => {
+  const [movies, setMovies] = useState([])
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState(null)
 
-  const mapedMovies = movies?.map((movie) => ({
-    id: movie.imdbID,
-    title: movie.Title,
-    year: movie.Year,
-    poster: movie.Poster
-  }))
+  const getMovies = async () => {
+    try {
+      setLoading(true)
+      setError(null)
+      const mapedMovies = await searchMovies({ search })
+      setMovies(mapedMovies)
+    } catch (error) {
+      setError(error.message)
+      throw new Error('Error getting movies from API')
+    } finally {
+      setLoading(false)
+    }
+  }
 
-  return { movies: mapedMovies }
+  return { movies, getMovies, loading, error }
 }

@@ -5,8 +5,8 @@ import { Movies } from './components/Movies'
 // import { useRef } from 'react' // value persists, it does not restart with the component, value can change without restart the component
 
 function App () {
-  const { movies } = useMovies()
   const { search, setSearch, error } = useSearch()
+  const { movies, getMovies, loading } = useMovies({ search })
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -17,7 +17,7 @@ function App () {
 
     // const { query } = Object.fromEntries(new window.FormData(e.target))
     // console.log(query)
-    console.log({ search })
+    getMovies()
   }
 
   const handleChange = (e) => {
@@ -36,7 +36,11 @@ function App () {
       </header>
 
       <main>
-        <Movies movies={movies} />
+        {
+          loading
+            ? <p>Loading.....</p>
+            : <Movies movies={movies} />
+        }
       </main>
     </div>
   )

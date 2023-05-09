@@ -7,6 +7,8 @@ API a usar:
 - https://www.omdbapi.com/
 - API_KEY: 9ebcad62
 
+- Endpoint: http://www.omdbapi.com/?apikey=9ebcad62&s=Avengers
+
 Requerimientos:
 
 - Necesita mostrar un input para buscar la película y un botón para buscar.
