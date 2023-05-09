@@ -1,9 +1,10 @@
 import responseMovies from '../mocks/results.json'
+// import noResults from '../mocks/no-results.json'
 
 export const useMovies = () => {
   const movies = responseMovies.Search
 
-  const mapedMovies = movies.map((movie) => ({
+  const mapedMovies = movies?.map((movie) => ({
     id: movie.imdbID,
     title: movie.Title,
     year: movie.Year,
