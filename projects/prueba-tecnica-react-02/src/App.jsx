@@ -2,26 +2,32 @@ import './App.css'
 import { useMovies } from './hooks/useMovies'
 import { useSearch } from './hooks/useSearch'
 import { Movies } from './components/Movies'
-// import { useRef } from 'react' // value persists, it does not restart with the component, value can change without restart the component
+import { useCallback, useState } from 'react'
+import debounce from 'just-debounce-it'
 
 function App () {
+  const [sort, setSort] = useState(false)
+
   const { search, setSearch, error } = useSearch()
-  const { movies, getMovies, loading } = useMovies({ search })
+  const { movies, getMovies, loading } = useMovies({ search, sort })
+
+  const debouncedMovies = useCallback(debounce((search) => {
+    getMovies({ search })
+  }, 300), [])
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    // const inputElement = inputRef.current
-    // const value = inputElement.value
-    // const value = inputRef.current.value
-    // console.log(value)
-
-    // const { query } = Object.fromEntries(new window.FormData(e.target))
-    // console.log(query)
-    getMovies()
+    getMovies({ search })
   }
 
   const handleChange = (e) => {
-    setSearch(e.target.value)
+    const newSearch = e.target.value
+    setSearch(newSearch)
+    debouncedMovies(newSearch)
+  }
+
+  const handleSort = (e) => {
+    setSort(!sort)
   }
 
   return (
@@ -30,6 +36,7 @@ function App () {
         <h1>Movies Finder</h1>
         <form className='form' onSubmit={handleSubmit}>
           <input style={{ border: '1px solid', borderColor: error ? 'red' : 'transparent' }} value={search} onChange={handleChange} name='query' type='text' placeholder='Avengers, The Matrix...' />
+          <input type="checkbox" checked={sort} onChange={handleSort}/>
           <button type='submit'>Buscar</button>
         </form>
         {error && <p style={{ color: 'red' }}>{error}</p>}
