@@ -36,7 +36,7 @@ function App () {
         <h1>Movies Finder</h1>
         <form className='form' onSubmit={handleSubmit}>
           <input style={{ border: '1px solid', borderColor: error ? 'red' : 'transparent' }} value={search} onChange={handleChange} name='query' type='text' placeholder='Avengers, The Matrix...' />
-          <input type="checkbox" checked={sort} onChange={handleSort}/>
+          <input type='checkbox' checked={sort} onChange={handleSort} />
           <button type='submit'>Buscar</button>
         </form>
         {error && <p style={{ color: 'red' }}>{error}</p>}
